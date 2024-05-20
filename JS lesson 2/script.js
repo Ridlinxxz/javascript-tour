@@ -101,6 +101,77 @@ console.log(fruitProcessor(2, 3));
 
 
 
+//ARRAYS
+const friends = ['Micheal', 'steven', 'Peter']; //literal syntax
+console.log(friends);
+
+const years = new Array(1991, 1992, 1993, 1994, 2000);
+
+//calling Arrays elements
+console.log(friends[0]);
+console.log(friends[2]);
+
+console.log(years[0]);
+
+//actual number of Arrays element
+console.log(friends.length);
+console.log(years.length);
+console.log(friends[friends.length - 1]);
+
+friends[2] = 'drey';// changing an array element
+console.log(friends);
+friends[3] = 'moe';//adding to array element
+console.log(friends);
+
+const firstName = 'ridwan';
+const ridwan = [firstName, 'oladoja', 2024 - 1997, 'yrs old', 'is a', 'programmer'];
+console.log(ridwan);
+
+//Array Exercise
+const calcAge = function (birthYear) {
+return 2024 - birthYear;
+}
+const year = [1990, 1994, 1987, 1999, 2000, 2001];//Arrays elements
+
+const age1 = calcAge(year[0]);
+const age2= calcAge(year[1]);
+const age3 = calcAge(year[2]);
+const age4 = calcAge(year[years.length - 1]);
+console.log(age1, age2, age3, age4); //Arrays producing values
+
+const ages = [calcAge(year[0]), calcAge(year[1]), calcAge(year[2])];
+console.log(ages); //Array producing arrays
+
+//ARRAY METHODS [BASIC] <ADD ELEMETS>
+const friend = ['Micheal', 'steven', 'Peter'];
+friend.push('Jay'); //PUSH FUNCTION: adds element to the end of the arrays.
+console.log(friend);
+
+ friend.unshift('james'); //UNSHIFT FUNCTION: adds element to the begining of the arrays.
+ console.log(friend);
+
+ friend.pop(); //POP FUNCTION: remove the last array element.
+ console.log(friend);
+
+ friend.shift(); //POP FUNCTION: remove the first array element.
+ console.log(friend);
+
+ console.log(friend.indexOf('steven')); //REFRENCE an element to it position in the arrays.
+ //OR
+ console.log(friend.includes('steven')); //REFRENCE an element as TRUE or FALSE.
+ 
+if (friend.includes('steven')) {
+    console.log('You have a friend call steven.');
+} else {
+    console.log("You don't have such friend!");
+}
 
 
+//CREATING OBJECTS
 
+const ridwann = {
+    firstName: 'Ridwan',
+    lastName: 'Oladoja',
+    age: '2024 - 1997',
+    friends: ['Micheal', 'ade', 'shola']
+};
