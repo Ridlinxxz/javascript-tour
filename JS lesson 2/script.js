@@ -176,7 +176,7 @@ logger();
 
 
 //CREATING OBJECTS with {} object literal syntax
-// const ridwann = {
+// const ridwan = {
 //     firstName: 'Ridwan',
 //     lastName: 'Oladoja',
 //     age: '2024 - 1997',
@@ -184,31 +184,32 @@ logger();
 // };
 
 //GETTING/RETRIEVING PROPERTY FROM OBJECTS
-const ridwann = {
+const ridwan = {
     firstName: 'Ridwan',
     lastName: 'Oladoja',
     age: '2024 - 1997',
     friends: ['Micheal', 'ade', 'shola']
 };
-console.log(ridwann.firstName); //DOT METHOD ✔
-console.log(ridwann['lastName']); //BRACKET METHOD
+console.log(ridwan.firstName); //DOT METHOD ✔
+console.log(ridwan['lastName']); //BRACKET METHOD
 
 const nameKey = 'Name';
-console.log(ridwann['first' + nameKey]);
-console.log(ridwann['last' + nameKey]);
+console.log(ridwan['first' + nameKey]);
+console.log(ridwan['last' + nameKey]);
 
-const interestedIn = prompt('What do you intend to know about ridwann? Choose between firstName, lastName, age, friends');
-// console.log(ridwann[interestedIn]);
+const interestedIn = prompt('What do you intend to know about ridwan? Choose between firstName, lastName, age, friends');
+// console.log(ridwan[interestedIn]);
 
-if(ridwann[interestedIn]) {
-    console.log(ridwann[interestedIn]);
+if(ridwan[interestedIn]) {
+    console.log(ridwan[interestedIn]);
 } else {
     console.log('No such information available now!');
 }
 
 //CHANGING/ADDING OBJECT VARIABLES with DOT & BRACKET METHOD
-ridwann.location = 'Nigeria';
-ridwann['ig'] = '@standardconcept';
-console.log(ridwann);
-console.log(`${ridwann.firstName} has ${ridwann.friends.length} friends, and his best friend is called ${ridwann.friends[2]}.`);
+ridwan.location = 'Nigeria';
+ridwan['ig'] = '@standardconcept';
+
+console.log(ridwan);
+console.log(`${ridwan.firstName} has ${ridwan.friends.length} friends, and his best friend is called ${ridwan.friends[2]}.`);
 
