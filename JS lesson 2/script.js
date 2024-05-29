@@ -161,7 +161,7 @@ logger();
 //  friend.pop(); //POP FUNCTION: remove the last array element.
 //  console.log(friend);
 
-//  friend.shift(); //POP FUNCTION: remove the first array element.
+//  friend.shift(); //SHIFT FUNCTION: remove the first array element.
 //  console.log(friend);
 
 //  console.log(friend.indexOf('steven')); //REFRENCE an element to it position in the arrays.
@@ -184,32 +184,66 @@ logger();
 // };
 
 //GETTING/RETRIEVING PROPERTY FROM OBJECTS
+// const ridwan = {
+//     firstName: 'Ridwan',
+//     lastName: 'Oladoja',
+//     age: '2024 - 1997',
+//     friends: ['Micheal', 'ade', 'shola']
+// };
+// console.log(ridwan.firstName); //DOT METHOD ✔
+// console.log(ridwan['lastName']); //BRACKET METHOD
+
+// const nameKey = 'Name';
+// console.log(ridwan['first' + nameKey]);
+// console.log(ridwan['last' + nameKey]);
+
+// const interestedIn = prompt('What do you intend to know about ridwan? Choose between firstName, lastName, age, friends');
+// // console.log(ridwan[interestedIn]);
+
+// if(ridwan[interestedIn]) {
+//     console.log(ridwan[interestedIn]);
+// } else {
+//     console.log('No such information available now!');
+// }
+
+// //CHANGING/ADDING OBJECT VARIABLES with DOT & BRACKET METHOD
+// ridwan.location = 'Nigeria';
+// ridwan['ig'] = '@standardconcept';
+
+// console.log(ridwan);
+// console.log(`${ridwan.firstName} has ${ridwan.friends.length} friends, and his best friend is called ${ridwan.friends[2]}.`);
+
+
+//OBJECT METHODS
 const ridwan = {
     firstName: 'Ridwan',
-    lastName: 'Oladoja',
-    age: '2024 - 1997',
-    friends: ['Micheal', 'ade', 'shola']
+    lastName: 'Oladoja', //STRING VALUE
+    birthYear: '1997',
+    job: 'teacher',
+    friends: ['Micheal', 'ade', 'shola'], //ARRAY VALUE
+    hasDriversLicense: true,  //BULEAN VALUE
+
+    // calcAge: function(birthYear) {
+    //  return 2037 - birthYear;
+    // }                            //FUNCTION
+
+    // calcAge: function() {
+    //     // console.log(this);
+    //     return 2037 - this.birthYear;
+    //    }                               //using 'THIS' method point direct to the object calling the METHOD / FUNCTION
+
+    calcAge: function () {
+        this.age = 2037 - this.birthYear;
+        return this.age; 
+       },
+
+    getSummary: function() {
+        return `${this.firstName} is a ${this.calcAge()} year old ${this.job}, he has ${this.hasDriversLicense ? 'a' : 'no'} driverslicense.`
+    }                                                                                      //tenary operator⬆
 };
-console.log(ridwan.firstName); //DOT METHOD ✔
-console.log(ridwan['lastName']); //BRACKET METHOD
 
-const nameKey = 'Name';
-console.log(ridwan['first' + nameKey]);
-console.log(ridwan['last' + nameKey]);
-
-const interestedIn = prompt('What do you intend to know about ridwan? Choose between firstName, lastName, age, friends');
-// console.log(ridwan[interestedIn]);
-
-if(ridwan[interestedIn]) {
-    console.log(ridwan[interestedIn]);
-} else {
-    console.log('No such information available now!');
-}
-
-//CHANGING/ADDING OBJECT VARIABLES with DOT & BRACKET METHOD
-ridwan.location = 'Nigeria';
-ridwan['ig'] = '@standardconcept';
-
-console.log(ridwan);
-console.log(`${ridwan.firstName} has ${ridwan.friends.length} friends, and his best friend is called ${ridwan.friends[2]}.`);
-
+console.log(ridwan.getSummary());
+// console.log(ridwan.calcAge());
+// console.log(ridwan['calcAge'](1997));
+// console.log(ridwan.age);
+ 
