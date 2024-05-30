@@ -1,4 +1,4 @@
-// LOOPS is use for repetitive object
+// itteration LOOPS is use for repetitive object
  
 //'for' loops keeps running while the condition is TRUE
 for(let rep = 1; rep <= 20; rep++) {
@@ -16,7 +16,6 @@ const ridwan = [
 ];
 const types = []
 
-
 for (let i = 0; i < ridwan.length; i++) {
     //Reading from ridwan array
     console.log(ridwan[i], typeof ridwan[i]);
@@ -33,4 +32,20 @@ const ages = [];
 for (let i = 0; i < years.length; i++) {
    ages.push(2037 - years[i]); 
 }
-console.log(ages);
+console.log(ages); 
+
+
+// //continue and break
+// console.log('---ONLY STRINGS---')
+// for (let i = 0; i < ridwan.length; i++) {
+//     if(typeof ridwan[i] !== 'string') continue;     //CONTINUE STATEMENT = if the next element is not a string then skip and continue with the next string elements
+
+//     console.log(ridwan[i], typeof ridwan[i]);
+// }
+
+// console.log('---BREAK WITH NUMBER---')
+// for (let i = 0; i < ridwan.length; i++) {
+//     if(typeof ridwan[i] === 'number') break;     //BREAK STATEMENT = if the next element is a NUMBER then break the whole loop process
+
+//     console.log(ridwan[i], typeof ridwan[i]);
+// }
