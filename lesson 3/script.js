@@ -62,23 +62,32 @@ for(let rep = 1; rep <= 20; rep++) {
 // console.log(ages); 
 
 //CREATING BACKWARDS LOOPS
-const ridwan = [
-        'Ridwan',
-        'Oladoja',
-        2024 - 1997,
-        'designer',
-        ['Micheal', 'ade', 'shola'],
-        true
-];
+// const ridwan = [
+//         'Ridwan',
+//         'Oladoja',
+//         2024 - 1997,
+//         'designer',
+//         ['Micheal', 'ade', 'shola'],
+//         true
+// ];
 
-for (let i = ridwan.length-1; i >= 0; i--) {
-    console.log(ridwan[i]); 
-}
+// for (let i = ridwan.length-1; i >= 0; i--) {
+//     console.log(ridwan[i]); 
+// }
 
-for (let exercise = 1; exercise < 5; exercise++) {
-    console.log(`-------Starting exercise ${exercise}`);
+// for (let exercise = 1; exercise < 5; exercise++) {
+//     console.log(`-------Starting exercise ${exercise}`);
 
-    for (let rep = 1; rep < 11; rep++) {
-        console.log(`Exercise ${exercise}: Pump push up ${rep}🏋️‍♂️ times.`);
-    }
-}
+//     for (let rep = 1; rep < 5; rep++) {
+//         console.log(`Exercise ${exercise}: Pump push up ${rep}🏋️‍♂️ times.`);
+//     }
+// }
+
+//WHILE LOOP
+ let rep = 1;
+ while (rep <= 10) {
+    console.log(`Lifting weights repetition ${rep} times.`);
+    rep++;
+ }
+
+ 
