@@ -90,4 +90,6 @@ for(let rep = 1; rep <= 20; rep++) {
     rep++;
  }
 
+ let dice =Math.trunc(Math.random() * 6) + 1;
+ console.log(dice);
  
