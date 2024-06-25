@@ -198,7 +198,7 @@ logger();
 // console.log(ridwan['last' + nameKey]);
 
 // const interestedIn = prompt('What do you intend to know about ridwan? Choose between firstName, lastName, age, friends');
-// // console.log(ridwan[interestedIn]);
+// console.log(ridwan[interestedIn]);
 
 // if(ridwan[interestedIn]) {
 //     console.log(ridwan[interestedIn]);
@@ -242,7 +242,7 @@ const ridwan = {
     }                                                                                      //tenary operator⬆
 };
 
-console.log(ridwan.getSummary());
+// console.log(ridwan.getSummary());
 // console.log(ridwan.calcAge());
 // console.log(ridwan['calcAge'](1997));
 // console.log(ridwan.age);
