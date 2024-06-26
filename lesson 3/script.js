@@ -1,11 +1,10 @@
 // itteration LOOPS is use for repetitive object
- 
-// 'for' loops keeps running while the condition is TRUE
-for(let rep = 1; rep <= 20; rep++) {
-   //  console.log('Lifting weights repetition 1');
-    console.log(`Lifting weights repetition ${rep} times.`);
-}
 
+// 'for' loops keeps running while the condition is TRUE
+for (let rep = 1; rep <= 20; rep++) {
+  //  console.log('Lifting weights repetition 1');
+  console.log(`Lifting weights repetition ${rep} times.`);
+}
 
 // const ridwan = [
 //         'Ridwan',
@@ -31,10 +30,9 @@ for(let rep = 1; rep <= 20; rep++) {
 // const agess = [];
 
 // for (let i = 0; i < yearss.length; i++) {
-//    agess.push(2024 - yearss[i]); 
+//    agess.push(2024 - yearss[i]);
 // }
-// console.log(agess); 
-
+// console.log(agess);
 
 // //continue and break
 // console.log('---ONLY STRINGS---')
@@ -51,15 +49,13 @@ for(let rep = 1; rep <= 20; rep++) {
 //     console.log(ridwan[i], typeof ridwan[i]);
 // }
 
-
-
 // const years = [1991, 2007, 1969, 2020];
 // const ages = [];
 
 // for (let i = 0; i < years.length; i++) {
-//    ages.push(2024 - years[i]); 
+//    ages.push(2024 - years[i]);
 // }
-// console.log(ages); 
+// console.log(ages);
 
 //CREATING BACKWARDS LOOPS
 // const ridwan = [
@@ -72,7 +68,7 @@ for(let rep = 1; rep <= 20; rep++) {
 // ];
 
 // for (let i = ridwan.length-1; i >= 0; i--) {
-//     console.log(ridwan[i]); 
+//     console.log(ridwan[i]);
 // }
 
 //CREATING LOOP INSIDE LOOP
@@ -85,12 +81,11 @@ for(let rep = 1; rep <= 20; rep++) {
 // }
 
 //WHILE LOOP
- let rep = 1;
- while (rep <= 10) {
-    console.log(`Lifting weights repetition ${rep} times.`);
-    rep++;
- }
+let rep = 1;
+while (rep <= 10) {
+  console.log(`Lifting weights repetition ${rep} times.`);
+  rep++;
+}
 
- let dice = Math.trunc(Math.random() * 6) + 1;
- console.log(dice);
- 
+let dice = Math.trunc(Math.random() * 6) + 1;
+console.log(dice);

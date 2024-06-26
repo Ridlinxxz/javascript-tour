@@ -105,7 +105,6 @@ let n = '5' + 2;
 n = n-1;
 console.log(n);*/
 
-
 // faulsy & truthy values
 
 /*const money = 100
@@ -150,7 +149,6 @@ if (ages <= 20) {
     console.log(ages-newAge)
 }*/
 
-
 // logical operators; AND, OR, NOT
 
 // const hasDriversLicense = true; //A
@@ -185,7 +183,6 @@ if (ages <= 20) {
 //     console.log('someone else shld drive!');
 // }
 
-
 // THE SWITCH STATEMENT
 // const day = 'monday';
 
@@ -206,7 +203,7 @@ if (ages <= 20) {
 //         break;
 //     case 'saturday':
 //     case 'sunday':
-//         console.log('Go play basketball');  
+//         console.log('Go play basketball');
 //         break;
 //     default:
 //         console.log('not a vilid day!');
@@ -233,19 +230,20 @@ if (ages <= 20) {
 //     console.log('not a valid day!');
 // }
 
-
 // THE CONDITIONAL OPERATOR (TERNARY OPERATOR)
 
 const age = 15;
 // age >= 18 ? console.log('I like to drink wine🍷'):
 // console.log('I like to drink water💧');
 
-const drink = age >= 18 ? 'You are good to go!🍷' : 'You are not matured enough, Drink water.💧';
+const drink =
+  age >= 18
+    ? 'You are good to go!🍷'
+    : 'You are not matured enough, Drink water.💧';
 console.log(drink);
-
 
 const favname = 'ridwan';
 
-const answer = favname === 'ridwan' ? 'You got my name right!✔' : 'You got my name wrong❌!';
+const answer =
+  favname === 'ridwan' ? 'You got my name right!✔' : 'You got my name wrong❌!';
 console.log(answer);
-

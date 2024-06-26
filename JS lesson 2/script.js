@@ -6,16 +6,14 @@
 // if (passText) hasDriversLiscence = true;
 // if (hasDriverLiscence) console.log('I can drive :D');
 
-
 //FUNTION DECLRATION
 function logger() {
-    console.log('My name is Ridwan');
+  console.log('My name is Ridwan');
 }
 // calling, running or invoking the function
 logger();
 logger();
 logger();
-
 
 // function fruitProcessor(apples, oranges) {
 //     const juice = `juice with ${apples} apples and ${oranges} oranges.`;
@@ -59,10 +57,6 @@ logger();
 // console.log(age2);
 // console.log(age3);
 
-
-
-
-
 //ARROW FUNCTION
 // const calcAge4 = birthYear => 2037 - birthYear;
 // const age4 = calcAge4(1996);
@@ -71,7 +65,6 @@ logger();
 // const calcAge5 = birthYear => 2024 - birthYear;
 // const age5 = calcAge5(1987);
 // console.log(age5);
-
 
 // const yearsOfRetirement = birthYear => {
 //     const age = 2037 - birthYear;
@@ -89,8 +82,6 @@ logger();
 // console.log(yearsOfRetirement(1993, 'Drey'));
 // console.log(yearsOfRetirement(1990, 'joe'));
 
-
-
 //FUNCTION CALLING OTHER FUNCTION
 // function cutFruitPieces(fruit) {
 //     return fruit * 4;
@@ -104,10 +95,6 @@ logger();
 //     return juice;
 // };
 // console.log(fruitProcessor(2, 3));
-
-
-
-
 
 // //ARRAYS
 // // const friends = ['Micheal', 'steven', 'Peter']; //literal syntax
@@ -167,13 +154,12 @@ logger();
 //  console.log(friend.indexOf('steven')); //REFRENCE an element to it position in the arrays.
 //  //OR
 //  console.log(friend.includes('steven')); //REFRENCE an element as TRUE or FALSE.
- 
+
 // if (friend.includes('steven')) {
 //     console.log('You have a friend call steven.');
 // } else {
 //     console.log("You don't have such friend!");
 // }
-
 
 //CREATING OBJECTS with {} object literal syntax
 // const ridwan = {
@@ -213,37 +199,37 @@ logger();
 // console.log(ridwan);
 // console.log(`${ridwan.firstName} has ${ridwan.friends.length} friends, and his best friend is called ${ridwan.friends[2]}.`);
 
-
 //OBJECT METHODS
 const ridwan = {
-    firstName: 'Ridwan',
-    lastName: 'Oladoja', //STRING VALUE
-    birthYear: '1997',
-    job: 'teacher',
-    friends: ['Micheal', 'ade', 'shola'], //ARRAY VALUE
-    hasDriversLicense: true,  //BULEAN VALUE
+  firstName: 'Ridwan',
+  lastName: 'Oladoja', //STRING VALUE
+  birthYear: '1997',
+  job: 'teacher',
+  friends: ['Micheal', 'ade', 'shola'], //ARRAY VALUE
+  hasDriversLicense: true, //BULEAN VALUE
 
-    // calcAge: function(birthYear) {
-    //  return 2037 - birthYear;
-    // }                            //FUNCTION
+  // calcAge: function(birthYear) {
+  //  return 2037 - birthYear;
+  // }                            //FUNCTION
 
-    // calcAge: function() {
-    //     // console.log(this);
-    //     return 2037 - this.birthYear;
-    //    }                               //using 'THIS' method point direct to the object calling the METHOD / FUNCTION
+  // calcAge: function() {
+  //     // console.log(this);
+  //     return 2037 - this.birthYear;
+  //    }                               //using 'THIS' method point direct to the object calling the METHOD / FUNCTION
 
-    calcAge: function () {
-        this.age = 2037 - this.birthYear;
-        return this.age; 
-       },
+  calcAge: function () {
+    this.age = 2037 - this.birthYear;
+    return this.age;
+  },
 
-    getSummary: function() {
-        return `${this.firstName} is a ${this.calcAge()} year old ${this.job}, he has ${this.hasDriversLicense ? 'a' : 'no'} driverslicense.`
-    }                                                                                      //tenary operator⬆
+  getSummary: function () {
+    return `${this.firstName} is a ${this.calcAge()} year old ${
+      this.job
+    }, he has ${this.hasDriversLicense ? 'a' : 'no'} driverslicense.`;
+  }, //tenary operator⬆
 };
 
 // console.log(ridwan.getSummary());
 // console.log(ridwan.calcAge());
 // console.log(ridwan['calcAge'](1997));
 // console.log(ridwan.age);
- 
