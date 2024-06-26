@@ -75,6 +75,7 @@ for(let rep = 1; rep <= 20; rep++) {
 //     console.log(ridwan[i]); 
 // }
 
+//CREATING LOOP INSIDE LOOP
 // for (let exercise = 1; exercise < 5; exercise++) {
 //     console.log(`-------Starting exercise ${exercise}`);
 
@@ -90,6 +91,6 @@ for(let rep = 1; rep <= 20; rep++) {
     rep++;
  }
 
- let dice =Math.trunc(Math.random() * 6) + 1;
+ let dice = Math.trunc(Math.random() * 6) + 1;
  console.log(dice);
  
