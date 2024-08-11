@@ -10,7 +10,7 @@
 // console.log(document.querySelector('.guess').value);
 
 //USING EventListner
-const number = Math.random()
+const number = Math.random(cd)
 
 document.querySelector('.check').addEventListener('click', function () {
   const guess = Number(document.querySelector('.guess').value);
