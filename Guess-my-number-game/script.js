@@ -13,6 +13,7 @@
 //USING EventListner
 let secretNumber = Math.trunc(Math.random() * 20 + 1); //Random Numbers betwwen 1-20
 let score = 20;
+let highscore = 0;
 
 document.querySelector('.check').addEventListener('click', function () {
   let guess = Number(document.querySelector('.guess').value);
@@ -30,6 +31,12 @@ document.querySelector('.check').addEventListener('click', function () {
     document.querySelector('body').style.backgroundColor = '#60b347';
 
     document.querySelector('.number').style.width = '30rem';
+
+    //Implementing highscore
+    if (score > highscore) {
+      highscore = score;
+      document.querySelector('.highscore').textContent = highscore;
+    }
 
     //WHEN GUESS IS TOO HIGH
   } else if (guess > secretNumber) {
@@ -57,7 +64,7 @@ document.querySelector('.check').addEventListener('click', function () {
     }
   }
 });
-//Try Again button
+//Try Again button activation
 document.querySelector('.again').addEventListener('click', function () {
   score = 20;
 
