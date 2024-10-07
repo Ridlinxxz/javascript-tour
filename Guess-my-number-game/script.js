@@ -18,6 +18,10 @@ const displayMessage = function (message) {
   //compressing .message in one function line of code
   document.querySelector('.message').textContent = message;
 };
+const correctNumber = function (number) {
+  //compressing .message in one function line of code
+  document.querySelector('.number').textContent = number;
+};
 
 document.querySelector('.check').addEventListener('click', function () {
   let guess = Number(document.querySelector('.guess').value);
@@ -32,7 +36,8 @@ document.querySelector('.check').addEventListener('click', function () {
     // document.querySelector('.message').textContent = '🎉 Correct Number!';
     displayMessage('🎉 Correct Number!');
 
-    document.querySelector('.number').textContent = secretNumber;
+    // document.querySelector('.number').textContent = secretNumber;
+    correctNumber(secretNumber);
 
     document.querySelector('body').style.backgroundColor = '#60b347';
 
@@ -48,10 +53,15 @@ document.querySelector('.check').addEventListener('click', function () {
   } else if (guess !== secretNumber) {
     if (score > 1) {
       //score value is stil greater than 1
-      document.querySelector('.message').textContent =
+      // document.querySelector('.message').textContent =
+      //   guess > secretNumber
+      //     ? '😞 Too High! Try Again.'
+      //     : '😞 Too Low! Try Again.'; //Tinary operator
+      displayMessage(
         guess > secretNumber
           ? '😞 Too High! Try Again.'
-          : '😞 Too Low! Try Again.'; //Tinary operator
+          : '😞 Too Low! Try Again.'
+      );
       score--; //decreasing the SCORE value by 1
       document.querySelector('.score').textContent = score;
     } else {
@@ -96,13 +106,15 @@ document.querySelector('.again').addEventListener('click', function () {
   document.querySelector('.score').textContent = score;
 
   // document.querySelector('.message').textContent = 'Start Guessing!';
-  displayMessage('Start Guessing!');
+  displayMessage('Start Guessing...');
 
-  document.querySelector('.number').textContent = '?';
+  // document.querySelector('.number').textContent = '?';
+  correctNumber('?');
 
   document.querySelector('.guess').value = '';
 
   document.querySelector('body').style.backgroundColor = '#222';
 
   document.querySelector('.number').style.width = '15rem';
+  // correctNumber((style.width = '15rem'));
 });
