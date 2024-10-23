@@ -33,3 +33,12 @@ overlay.addEventListener('click', closeModal);
 //   modal.classList.add('hidden');
 //   overlay.classList.add('hidden');
 // });
+
+//SETTING ESC & BACKSPACE KEY TO CLOSE A POPUP
+document.addEventListener('keydown', function (e) {
+  if (
+    (e.key === 'Escape', 'Backspace' && !modal.classList.contains('hidden'))
+  ) {
+    closeModal(); //CALLING closeModal function
+  }
+});
