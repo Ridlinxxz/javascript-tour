@@ -12,6 +12,8 @@ const diceEl = document.querySelector('.dice');
 const btnNew = document.querySelector('.btn--new');
 const btnRoll = document.querySelector('.btn--roll');
 const btnHold = document.querySelector('.btn--hold');
+const playerTag1 = document.getElementById('name--0');
+const playerTag2 = document.getElementById('name--1');
 
 let scores, currentScore, activePlayer, playing;
 
@@ -32,8 +34,10 @@ const init = function () {
   player1El.classList.remove('player--winner');
   player0El.classList.add('player--active');
   player1El.classList.remove('player--active');
+  playerTag1.textContent = 'Player 1';
+  playerTag2.textContent = 'Player 2';
 };
-init();//calling the starting condition
+init(); //calling the starting condition
 
 //Switch player
 const switchPlayer = function () {
@@ -87,6 +91,7 @@ btnHold.addEventListener('click', function () {
       document
         .querySelector(`.player--${activePlayer}`)
         .classList.remove('player--active');
+      document.getElementById(`name--${activePlayer}`).textContent = 'WINNER🥇';
     } else {
       //3.switch to the next player
       switchPlayer();
