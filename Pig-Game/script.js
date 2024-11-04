@@ -45,10 +45,10 @@ const switchPlayer = function () {
   activePlayer = activePlayer === 0 ? 1 : 0; //changing activePlayer with Ternaty operator
   currentScore = 0;
   player0El.classList.toggle('player--active'); //changing the background color of the current active layer
-  player1El.classList.toggle('player--active');
-}; //toggle add and remove object.
+  player1El.classList.toggle('player--active'); //toggle add and remove object.
+};
 
-//Rolling dice functionality
+//Rolling the dice functionality
 btnRoll.addEventListener('click', function () {
   if (playing) {
     //1. Generating a random dice roll
@@ -63,14 +63,14 @@ btnRoll.addEventListener('click', function () {
       //Add dice to current score
       currentScore += dice; //Adding current score to the new random number
       document.getElementById(`current--${activePlayer}`).textContent =
-        currentScore;
+        currentScore;//Display current score
     } else {
       //switch to next player
       switchPlayer();
     }
   }
 });
-//appointing hold button
+//Appointing hold button
 btnHold.addEventListener('click', function () {
   if (playing) {
     //1. Add current score to te score of the active player
