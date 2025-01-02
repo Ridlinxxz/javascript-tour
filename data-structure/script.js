@@ -47,18 +47,83 @@ const restaurant = {
   order: function (starterIndex, mainIndex) {
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
   },
+
+  orderDelivery: function ({ starterIndex, mainIndex, time, address }) {
+    console.log(
+      `Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will delivered to ${address} at ${time}`
+    );
+  },
+
+  orderPasta: function (ing1, ing2, ing3) {
+    console.log(
+      `Here is your delicious pasta with ${ing1}, ${ing2}, and ${ing3}`
+    );
+  },
 };
-const { name, openingHours, categories } = restaurant;
-console.log(name, openingHours, categories);
 
-const {
-  name: restaurantName,
-  openingHours: hours,
-  categories: tags,
-} = restaurant;
-console.log(restaurantName, hours, tags);
+restaurant.orderDelivery({
+  time: '22:30',
+  address: 'Emir road ilorin',
+  mainIndex: 2,
+  starterIndex: 2,
+});
 
-////////////////////////////////
+//The spread operator (...)
+const arr = [7, 8, 9];
+const newBadArr = [1, 2, ...arr]; //using the spread operator
+console.log(newBadArr);
+
+const newMenu = [...restaurant.mainMenu, 'amala', 'eba'];
+console.log(newMenu);
+
+//copy array
+const mainMenuCopy = [...restaurant.mainMenu];
+
+//join 2 arrays
+const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+console.log(menu);
+
+//Iterables: arrays, strings, maps, sets EXCEPT objects
+const str = 'Ridwan';
+const letters = [...str, '', 's.'];
+console.log(letters);
+console.log(...str);
+
+const ingredients = [
+  prompt("Let's make pasta! Ingredient 1?"),
+  prompt('Ingredient 2?'),
+  prompt(' Ingredient 3?'),
+];
+console.log(ingredients);
+restaurant.orderPasta(...ingredients);
+
+///////////////////////////////////////////////////////////////
+// const { name, openingHours, categories } = restaurant;
+// console.log(name, openingHours, categories);
+
+// const {
+//   name: restaurantName,
+//   openingHours: hours,
+//   categories: tags,
+// } = restaurant;
+// console.log(restaurantName, hours, tags);
+
+// //Default value
+// const { menu = [], starterMenu: staters = [] } = restaurant;
+// console.log(menu, staters);
+
+// //Mutating variables
+// let a = 111;
+// let b = 999;
+// const obj = { a: 23, b: 7, c: 14 };
+// ({ a, b } = obj); //Destructuring assignment
+// console.log(a, b);
+
+// //Nested objects
+// const { fri } = openingHours;
+// console.log(fri);
+
+///////////////////////////////////////////////////////////
 // const restaurant = {
 //   name: 'Classico Italiano',
 //   location: 'Via Angelo Tavanti 23, Fiarenze, Italy',
@@ -71,6 +136,7 @@ console.log(restaurantName, hours, tags);
 //   },
 // };
 
+/////////////////////////////////////////
 // //DESTRUCTURING ARRAY
 
 // const arr = [2, 3, 4]; //array declared
