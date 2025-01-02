@@ -32,5 +32,17 @@ console.log(main, secondary);
 [main, secondary] = [secondary, main]; //destructring arrays
 console.log(main, secondary);
 
+//Receive 2 return value from a function
 const [starter, mainCourse] = restaurant.order(1, 2);
 console.log(starter, mainCourse);
+
+//case of nested array[an array inside an array]
+const nested = [2, 4, [5, 6]];
+// const [i, , j] = nested;
+// console.log(i, j);
+const [i, , [j, k]] = nested;
+console.log(i, j, k);
+
+//Defaul values
+const [p = 1, q = 1, r = 1] = [8, 9];
+console.log(p, q, r);
