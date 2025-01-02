@@ -89,14 +89,18 @@ const letters = [...str, '', 's.'];
 console.log(letters);
 console.log(...str);
 
-const ingredients = [
-  prompt("Let's make pasta! Ingredient 1?"),
-  prompt('Ingredient 2?'),
-  prompt(' Ingredient 3?'),
-];
-console.log(ingredients);
-restaurant.orderPasta(...ingredients);
+//Realworld example
+// const ingredients = [
+//   prompt("Let's make pasta! Ingredient 1?"),
+//   prompt('Ingredient 2?'),
+//   prompt(' Ingredient 3?'),
+// ];
+// console.log(ingredients);
+// restaurant.orderPasta(...ingredients);
 
+//Objects
+const newRestaurant = { foundedIn: 2024, ...restaurant, founder: 'Ridwan' };
+console.log(newRestaurant);
 ///////////////////////////////////////////////////////////////
 // const { name, openingHours, categories } = restaurant;
 // console.log(name, openingHours, categories);
